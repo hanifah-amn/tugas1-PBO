@@ -10,9 +10,9 @@ import main.bidang2d.Lingkaran;
  * @author Owner
  */
 public class Tabung extends Lingkaran {
-    double tinggi;
+    int tinggi;
     
-    public Tabung(double r, double tinggi){
+    public Tabung(int r, int tinggi){
         super(r);
         this.tinggi = tinggi;
     }
@@ -22,7 +22,7 @@ public class Tabung extends Lingkaran {
         return(2*super.hitungLuas() + super.hitungKeliling()*tinggi);
     }
     
-    double hitungVolume() {
+    public double hitungVolume() {
         return(super.hitungLuas()*tinggi);
     }
 }

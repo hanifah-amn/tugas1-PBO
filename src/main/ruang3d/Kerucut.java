@@ -10,14 +10,14 @@ import main.bidang2d.Lingkaran;
  * @author Owner
  */
 public class Kerucut extends Lingkaran {
-    double tinggi;
+    int tinggi;
     
-    public Kerucut(double r, double tinggi){
+    public Kerucut(int r, int tinggi){
         super(r);
         this.tinggi = tinggi;
     }
     
-    private double hitungKemiringan() {
+    double hitungKemiringan() {
         return Math.sqrt(Math.pow(tinggi, 2)+Math.pow(r, 2));
     }
     
@@ -26,7 +26,7 @@ public class Kerucut extends Lingkaran {
         return(super.hitungLuas() + Math.PI*r*hitungKemiringan());
     }
     
-    double hitungVolume() {
+    public double hitungVolume() {
         return(super.hitungLuas()*tinggi/3);
     }
 }

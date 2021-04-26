@@ -10,10 +10,10 @@ package main.bidang2d;
  * @author Owner
  */
 public class Lingkaran implements Bidang2d {
-    public double r;
+    public int r;
     double keliling, luas;
     
-    public Lingkaran(double r){
+    public Lingkaran(int r){
         this.r = r;
     }
     

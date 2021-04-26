@@ -10,7 +10,7 @@ import main.bidang2d.Lingkaran;
  * @author Owner
  */
 public class Bola extends Lingkaran {
-    public Bola(double r){
+    public Bola(int r){
         super(r);
     }
     
@@ -19,7 +19,7 @@ public class Bola extends Lingkaran {
         return (4*super.hitungLuas());
     }
     
-    double hitungVolume(){
+    public double hitungVolume(){
         return (Math.PI*Math.pow(r, 3)*4/3);
     }
 }

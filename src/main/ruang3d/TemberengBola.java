@@ -10,7 +10,7 @@ package main.ruang3d;
  * @author Owner
  */
 public class TemberengBola extends Bola {
-    double tinggiTembereng;
+    int tinggiTembereng;
     
     double hitungLuas() {
         
