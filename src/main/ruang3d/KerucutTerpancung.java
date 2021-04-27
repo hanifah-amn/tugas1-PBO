@@ -17,15 +17,13 @@ public class KerucutTerpancung extends Kerucut {
         this.kerucut1 = kerucut1;
     }
     
-    double hitungLuasSelimut(){
-        //menghitung luas selimut kerucut yang memotong
-        double kemiringan;
-        kemiringan = kerucut1.hitungKemiringan() - hitungKemiringan();
-        return (Math.PI*kemiringan*(r+kerucut1.r));
-    }
-    
     public double hitungLuas(){
-        return (kerucut1.hitungLuas() - hitungLuasSelimut() + super.hitungLuas());
+        //menghitung luas selimut kerucut yang memotong
+        double kemiringan, luasSelimut;
+        kemiringan = kerucut1.hitungKemiringan() - hitungKemiringan();
+        luasSelimut = Math.PI*kemiringan*(r+kerucut1.r);
+        
+        return (kerucut1.hitungLuas() - luasSelimut + super.hitungLuas());
     }
     
     @Override

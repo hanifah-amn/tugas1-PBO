@@ -4,20 +4,27 @@
  * and open the template in the editor.
  */
 package main.ruang3d;
-
+import main.bidang2d.Lingkaran;
 /**
  *
  * @author Owner
  */
 public class TemberengBola extends Bola {
-    int tinggiTembereng;
+    int tinggi;
     
-    double hitungLuas() {
-        
+    public TemberengBola(int tinggi){
+        super(tinggi);
     }
     
     @Override
-    double hitungVolume() {
-        return (Math.PI*tinggiTembereng*tinggiTembereng*(3*r-tinggiTembereng)/3);
+    public double hitungLuas() {
+        double luasAlas;
+        luasAlas = Math.PI*tinggi*tinggi;
+        return (luasAlas + super.hitungLuas()/2);
+    }
+    
+    @Override
+    public double hitungVolume() {
+        return (super.hitungVolume()/2);
     }
 }

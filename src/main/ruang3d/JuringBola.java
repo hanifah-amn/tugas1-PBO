@@ -10,11 +10,21 @@ package main.ruang3d;
  * @author Owner
  */
 public class JuringBola extends Bola {
-    double hitungLuas() {
-        
+    int derajat;
+    
+    public JuringBola(int r, int derajat){
+        super(r);
+        this.derajat = derajat;
     }
     
-    double hitungVolume() {
-        
+    @Override
+    public double hitungLuas() {
+        double luasSelimut; //bidang lengkung bola
+        luasSelimut = derajat/360 * super.hitungLuas();
+        return (super.hitungLuas() + luasSelimut);
+    }
+    
+    public double hitungVolume() {
+        return (derajat/360 * super.hitungVolume());
     }
 }

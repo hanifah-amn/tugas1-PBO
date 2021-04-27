@@ -11,6 +11,7 @@ import main.ruang3d.Kerucut;
 import main.ruang3d.Bola;
 
 import main.ruang3d.KerucutTerpancung;
+import main.ruang3d.JuringBola;
 /**
  *
  * @author Owner
@@ -110,8 +111,16 @@ public class Main {
         
         switch(pilihan){
             case 1 : break;
-            case 2 : break;
-            case 3 : break;
+            case 2 : 
+                int derajat;                
+                System.out.print("Derajat juring = ");
+                derajat = input.nextInt();
+
+                JuringBola juringBola = new JuringBola(r,derajat);
+                System.out.println("Luas kerucut terpancung = " + juringBola.hitungLuas());
+                System.out.println("Volume kerucut terpancung = " + juringBola.hitungVolume());
+                break;
+            case 3 : break; //input tinggi tembereng
             case 4 : break;
             case 5 : break;
             default: break;
